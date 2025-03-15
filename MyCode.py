@@ -324,11 +324,7 @@ print("sum of two number is : "+ z)
 result =eval(input("enter an expression")) # we can evaluate expression by using eval function .
 print(result)
 '''
-from tkinter.font import names
-from traceback import print_tb
 
-from IPython.core.ultratb import ListTB
-from django.db.models.fields import return_None
 # import sys
 # x=int(sys.argv[1])
 # y=int(sys.argv[2])
@@ -523,7 +519,7 @@ from django.db.models.fields import return_None
 # we have 2 methods for copying the array
 # 1.shallow copy in which we use .view() // if we change the element in original array then it will reflect in the copied array as well
 # 2.deep copy in which we use
-from numpy import *
+#from numpy import *
 # val=array([1,2,3,4,5,6,7])
 # vals=val.view()
 # val[0]=100
@@ -545,7 +541,7 @@ from numpy import *
 #    print(e,end=" ")
 
 # matrix
-from numpy import *
+# from numpy import *
 # val=array([[1,2,3,4],[5,6,7,8],[9,10,11,12]])
 # print(val.shape)
 # print(val.ndim)
@@ -1174,14 +1170,23 @@ from numpy import *
 # print(f)
 
 # factorial of a no
-n=int(input("enter a no"))
-if(n==0 or n==1):
-    print(1)
-else:
-    f = 1
-    for i in range(2, n+1):
-        f = f * i
-    print(f)
+# n=int(input("enter a no"))
+# if(n==0 or n==1):
+#     print(1)
+# else:
+#     f = 1
+#     for i in range(2, n+1):
+#         f = f * i
+#     print(f)
+
+# python with database
+import mysql.connector
+mydb=mysql.connector.connect(host="localhost",user="root",passwd="paras@yadav",database="bank_db")
+mycursor=mydb.cursor()
+mycursor.execute("select * from employees")
+result=mycursor.fetchone()
+for i in result:
+    print(i)
 
 
 
