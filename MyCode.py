@@ -1180,13 +1180,83 @@ print(result)
 #     print(f)
 
 # python with database
-import mysql.connector
-mydb=mysql.connector.connect(host="localhost",user="root",passwd="paras@yadav",database="bank_db")
-mycursor=mydb.cursor()
-mycursor.execute("select * from employees")
-result=mycursor.fetchone()
-for i in result:
-    print(i)
+# import mysql.connector
+# mydb=mysql.connector.connect(host="localhost",user="root",passwd="paras@yadav",database="bank_db")
+# mycursor=mydb.cursor()
+# mycursor.execute("select * from employees")
+# result=mycursor.fetchone()
+# for i in result:
+#     print(i)
+
+# linear search
+
+# def linear(n,temp):
+#     for i in range(len(n)):
+#         if(n[i]==temp):
+#             return i
+#
+#     else:
+#         return -1
+# num=[10,20,30,40,50,60]
+# r=linear(num,10)
+# print("element found at ",r)
 
 
+# def binary(n,temp,low,high):
+#     while(low<=high):
+#         mid=(low+high)//2
+#         if(n[mid]==temp):
+#             return mid
+#         elif(temp>n[mid]):
+#             low=mid+1
+#         else:
+#             high=mid-1
+#     return -1
+# num=[10,20,30,40,50,60]
+# print(len(num))
+# r=binary(num,60,0,len(num)-1)
+# print("Element found at ",r)
+
+# def bubble(n):
+#     for i in range(len(n)):
+#         for j in range(len(n)-1):
+#             if(n[j]>n[j+1]):
+#                 temp=n[j]
+#                 n[j]=n[j+1]
+#                 n[j+1]=temp
+#         for data in n:
+#             print(data,end=" ")
+#         print()
+# num=[10,9,6,7,12,11,15,14]
+# bubble(num)
+
+# def selection(n):
+#     for i in range(len(n)):
+#         min=i
+#         for j in range(i+1,len(n)):
+#           if(n[min]>n[j]):
+#               min=j
+#         temp=n[min]
+#         n[min]=n[i]
+#         n[i]=temp
+#
+#         for data in n:
+#             print(data,end=" ")
+#         print()
+# num=[10,9,6,7,12,11,15,14]
+# selection(num)
+
+# def insertion(n):
+#     for i in range(1,len(n)):
+#         key=n[i]
+#         j=i-1
+#         while(j>-1 and n[j]>key):
+#             n[j+1]=n[j]
+#             j-=1
+#         n[j+1]=key
+#         for data in n:
+#              print(data,end=" ")
+#         print()
+# num=[10,9,6,7,12,11,15,14]
+# insertion(num)
 
