@@ -58,8 +58,8 @@
 # Hash symbol can be use to comment single line in python 
 # multiline comment using string literals 
 #ex
-""" paras is good boy and disha is good girl
-    they study in same college name KEC """
+""" hello i am paras yadav
+    study at KEC """
 print("hello")
 
 
