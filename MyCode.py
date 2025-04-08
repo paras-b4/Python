@@ -324,6 +324,8 @@ print("sum of two number is : "+ z)
 result =eval(input("enter an expression")) # we can evaluate expression by using eval function .
 print(result)
 '''
+from functools import reduce
+from itertools import count
 
 # import sys
 # x=int(sys.argv[1])
@@ -1259,4 +1261,802 @@ print(result)
 #         print()
 # num=[10,9,6,7,12,11,15,14]
 # insertion(num)
+
+# import mysql.connector
+#
+# mydb=mysql.connector.connect(host="localhost",passwd="paras@yadav",user="root",database="disha")
+# mycursor=mydb.cursor()
+# mycursor.execute("select * from employees")
+# result=mycursor.fetchone()
+# for i in result:
+#     print(i)
+
+# python has a built-in memory manager that allocate memory for object dynamically .
+# Each object in python has a refrence count ( number of reference pointing to it )
+
+# import sys
+#
+# x = [1, 2, 3]  # List is created in memory
+# print(sys.getrefcount(x))  # Reference count (usually 2, as `getrefcount` adds 1)
+#
+# y = x  # Another reference to the same object
+# print(sys.getrefcount(x))  # Reference count increases
+#
+# del x  # Removing one reference
+# print(sys.getrefcount(y))  # Still referenced by `y`
+#
+# print(y)
+# y = None  # Now reference count becomes 0 → Object is garbage collected
+# print(sys.getrefcount(y))
+# import sys
+# x=[1,2,3,4]
+# print(sys.getrefcount(x))# getrefcount add 1 default
+#
+# y=x
+# print(sys.getrefcount(y))
+# del x
+# z=y
+# print(y)
+# print(sys.getrefcount(z))
+
+
+# prime no in range
+# lower=100
+# higher=200
+# for data in range(lower,higher):
+#     for i in range(2,data):
+#         if(data%i==0):
+#             break
+#
+#     else:
+#         print(data)
+
+# num=[1,2,3,4,5,6,1,1,1]
+# num.extend([10,12,13,171,19])
+#
+# print(num)
+# num.reverse()
+# print(num)
+# print(num.count(1))
+# num.remove(1)
+# print(num)
+# num1=num.copy()
+# print(num1)
+# print(num.pop())
+
+# num=[10,20,30,40,10,20,10]
+# num1=[]
+# r=len(num)
+# for i in range(r):
+#     if num[i] not in num1:
+#         num1.append(num[i])
+# print(num1)
+
+# n=True
+# print(float(n))
+
+# n=5
+# n1=float(n)
+# n2=str(n)
+# n3=complex(n)
+# n4=bool(n)
+# n5=list('paras yadav')
+# n6=dict(name='paras',yadav='paras')
+# print(n1)
+# print(n2)
+# print(n3)
+# print(n4)
+# print(n5)
+# print(n6)
+
+# a=5
+# b=a+3.5
+# print(b)
+
+# st='abc' # value error
+# print(int(st))
+
+# lower=100
+# higher=200
+# for data in range(lower,higher):
+#     for i in range(2,data):
+#         if(data%i==0):
+#
+#             break
+#     else:
+#         print(data)
+
+# num=int(input("Enter a no"))
+# for i in range(2,num-1):
+#     if(num%i==0):
+#         print("not prime")
+#         break
+# else:
+#     print("prime")
+
+# fibonaci
+# def fib(n):
+#     a=0
+#     b=1
+#     print(a,end=' ')
+#     print(b,end=" ")
+#     for i in range(2,n):
+#         c=a+b
+#         a=b
+#         b=c
+#         print(c,end=' ')
+# fib(10)
+
+# factorial
+
+# def fact(n):
+#     if(n==0 or n==1):
+#         print(1)
+#     else:
+#         fact=1
+#         for i in range(2,n+1):
+#             fact=fact*n
+#             n=n-1
+#         return fact
+#
+# r=fact(5)
+# print(r)
+
+# def fact(n):
+#     if(n==0 or n==1):
+#         print(1)
+#     else:
+#         fact=1
+#         for i in range(2,n+1):
+#             fact=fact*i
+#
+#         return fact
+#
+# r=fact(5)
+# print(r)
+
+
+# def fact(n):
+#     f=1
+#     if n==0:
+#         return 1
+#     for i in range(2,n+1):
+#         f=n*fact(n-1)
+#     return f
+# print(fact(5))
+
+
+# a=100
+# def greet():
+#
+#     # a=globals()['a'] # we can access global variable using globals keyword .
+#     # a=10
+#     # print(a)
+#
+#     global a # we can access global keyword using global and after modification we can change the global keyword as well .
+#     a=9
+#     print(a)
+#
+# greet()
+# print(a)
+
+# nums=[1,2,3,4,5]
+# values=[10,20,30,40,50]
+# d=dict(zip(nums,values))
+#
+# d[6]='paras'
+# for i in range(len(d)):
+#    print( d.items())
+# s=d.copy()
+# print(s)
+
+# s1={1,2,3,4,5}
+# s={1,2,3,4,5,12,3,8}
+# s.add(23)
+# print(s.union(s1))
+# print(s)
+# print(s.intersection(s1))
+
+# d={1:'paras',2:'aadi',3:'rishabh',4:'dev',5:[10,20,30,40],6:{1,2,3,4,5}}
+# print(d)
+
+# import mysql.connector
+# mydb=mysql.connector.connect(passwd='paras@yadav',host='Localhost',user='root',database='paras')
+# my=mydb.cursor()
+# my.execute("select * from paras")
+# result=my.fetchall()
+# for i in result:
+#     print(i)
+
+# decorators
+# def div(a,b):
+#     r=a/b
+#     print(r)
+#
+#
+# def dev(fun):
+#     def inner(a,b):
+#         if(a<b):
+#             a,b=b,a
+#         return fun(a,b)
+#     return inner
+# de=dev(div)
+# de(2,4)
+
+# operator overloading
+# class A:
+#     def __init__(self,x,y):
+#         self.x=x
+#         self.y=y
+#         print("constructor")
+#     def sum(self):
+#         r=self.a+self.b
+#         print(r)
+#     def __add__(self, other):
+#         m=self.x+other.x
+#         m1=self.y+other.y
+#         m2=A(m,m1)
+#         return m2
+# a=A(10,20)
+# b=A(90,30)
+# c=a+b
+# print(c.x)
+# print(c.y)
+
+# printing pattern
+
+# * * * * *
+# * * * * *
+# * * * * *
+# * * * * *
+# * * * * *
+# for i in range(5):
+#     j=0
+#     for j in range(5):
+#         print('*',end=" ")
+#
+#     print()
+
+# * * * * *
+# * * * *
+# * * *
+# * *
+# *
+# for i in range(5):
+#     j=0
+#     for j in range(5-i):
+#         print('*',end=" ")
+#     print()
+
+#   *****
+#    ****
+#     ***
+#      **
+#       *
+#
+# for i in range(5):
+#     j=0
+#     print(" "*i,end=" ")
+#     for j in range(5-i):
+#         print("*",end="")
+#
+#     print()
+
+#  * * * * *
+#   * * * *
+#    * * *
+#     * *
+#      *
+# for i in range(5):
+#     j=0
+#     print(" "*i,end=" ")
+#     for j in range(5-i):
+#         print("*",end=" ")
+#
+#     print()
+
+#     *
+#    * *
+#   * * *
+#  * * * *
+# * * * * *
+
+# for i in range(5,0,-1):
+#     print(" "*i,end=' ')
+#     j=0
+#     for j in range (5-i+1):
+#         print("*",end=" ")
+#     print()
+
+# operator overloading
+# class A:
+#     def __init__(self,a,b):
+#         self.a=a
+#         self.b=b
+#     def sum(self):
+#         r=self.a+self.b
+#         print(r)
+#     def __add__(self, other):
+#         m=self.a+other.a
+#         m1=self.b+other.b
+#         m2=A(m,m1)
+#         return m2
+# a=A(10,20)
+# b=A(40,50)
+# c=a+b
+# print(c.a) # 50
+# print(c.b) # 70
+
+# decorators
+# def div(a,b):
+#     r=a/b
+#     print(r)
+#
+# def smart_div(fun):
+#     def inner(a,b):
+#         if(a<b):
+#             a,b=b,a
+#         return fun(a,b)
+#     return inner
+# dev=smart_div(div)
+# dev(2,5)
+
+# from abc import ABC , abstractmethod
+# class A(ABC):
+#     @abstractmethod
+#     def greet(self):
+#         pass
+#     def show(self):
+#         print("In A show")
+# class B (A):
+#     @abstractmethod
+#     def config(self):
+#         pass
+#     def greet(self):
+#         print("Hello Good Morning")
+# class C(B):
+#     def config(self):
+#         print("In C config")
+#
+# c=C()
+# c.config()
+# c.greet()
+# c.show()
+
+# file handling
+# f=open("paras.txt","r")
+# # print(f.read())
+# print(f.readline()) # This moves the file cursor to the end
+# f.seek(0) #  Reset cursor to beginning
+# f1=open("paras1.txt","a")
+# for data in f:
+#     f1.write(data)
+# f1=open("paras1.txt","r")
+# print(f1.read())
+
+
+# f=open('paras1.png','rb')
+# f1=open('paras2.png','wb')
+# for data in f:
+#     f1.write(data)
+
+# monkey patching
+# class A:
+#     def __init__(self,a,b):
+#         self.a=a
+#         self.b=b
+#         print("constructor")
+#     def sum(self):
+#         r=self.a+self.b
+#         return r
+#     def sub (self):
+#         r=self.a-self.b
+#         return r
+# A.sum=A.sub
+#
+# a=A(2,5)
+# print(a.sub())
+
+# Monkey Patching
+# def bark():
+#     return "woof"
+# def new_bark():
+#     return "Meow i am secretly a cat "
+# bark=new_bark
+# print(bark())
+
+# filter method is used to filter the elements ob the basis of condition
+# map is used to transform each element
+# reduce is used to combine the elements into a single unit and gives the final output .
+
+# nums=[10,15,20,25,30,35,40,45]
+# n=list(filter(lambda n:n%2==0 ,nums))
+# print(n)
+# n1=list(map(lambda a:a*2,n))
+# print(n1)
+# n2=reduce(lambda a,b:a+b,n1)
+# print(n2)
+
+# kwargs means keyword argument means a collection of data
+# def person(name,age,*data):
+#     for i in data:
+#         print('data is ',i)
+#
+# person('paras',22,200000,'java','up')
+
+# def person(name,age,**data):
+#     for i,j in data.items():
+#         print('data is ',i,j)
+#
+# person('paras',22,salary=200000,sub='java',city='up')
+
+# inner class
+# We can call or use the inner class from within the outer class as well as from outside the outer class in Python.
+# class A:
+#     def __init__(self,a,b):
+#         self.a=a
+#         self.b=b
+#         self.c=self.B(30,40)
+#
+#     def show(self):
+#         r=self.a+self.b
+#         print("in A show",r)
+#         self.c.show(60)
+#     class B:
+#         def __init__(self,a,b):
+#             self.a=a
+#             self.b=b
+#         def show(self,c):
+#             r = self.a + self.b+c
+#             print("in B show",r)
+# a=A(10,20)
+# a.show()
+# b=A.B(20,40)
+# b.show(50)
+
+# duck typing
+# class desktop:
+#     def execute(self):
+#         print("compiling in desktop")
+#
+# des=desktop()
+# class laptop:
+#     def execute(self):
+#         print("compiling in laptop")
+# lap=laptop()
+#
+# class A:
+#     def config(self,des):
+#         des.execute()
+# a=A()
+# a.config(lap)
+
+# monkey patching
+# class A:
+#     def bark(self):
+#          print("woof")
+#     def new_bark(self):
+#       print("Meow i am secretly a cat ")
+# A.bark=A.new_bark
+# a=A()
+# a.bark()
+
+# def bark():
+#     print("woof")
+# def new_bark():
+#     print("Meow i am secretly a cat ")
+# bark=new_bark
+# bark()
+
+# bubble sort
+# def bubble(num):
+#     for i in range(len(num)):
+#         for j in range(len(num)-1):
+#             if(num[j]>num[j+1]):
+#                 temp=num[j]
+#                 num[j]=num[j+1]
+#                 num[j+1]=temp
+#         for i in range(len(num)):
+#             print(num[i],end=" ")
+#         print()
+# num=[15,12,11,16,19,14]
+# bubble(num)
+
+# Linear search
+# def linear(num,target):
+#     for i in range(len(num)):
+#         if(num[i]==target):
+#             return i
+#
+# num=[15,12,11,16,19,14]
+# target=11
+# r=linear(num,target)
+# print("Element found at index ",r)
+
+# Binary search
+# def Binary(num,low,high,target):
+#     while(low<=high):
+#         mid=(low+high)//2
+#         if(num[mid]==target):
+#             return mid
+#         elif(num[mid]>target):
+#             high=mid-1
+#         else:
+#             low=mid+1
+#
+# num=[10,12,15,19,21,27]
+# low=0
+# high=len(num)-1
+# target=10
+# r=Binary(num,low,high,target)
+# print('Element found at index ',r)
+
+# selection sort
+# def selection(num):
+#     for i in range(len(num)-1):
+#         min=i
+#         for j in range(i+1,len(num)):
+#             if(num[j]<num[min]):
+#                 min=j
+#         temp=num[min]
+#         num[min]=num[i]
+#         num[i]=temp
+#         for i in num:
+#             print(i,end=" ")
+#         print()
+#
+# num=[15,12,11,16,19,14]
+# selection(num)
+
+# insertion sort
+# def insertion(num):
+#     for i in range(1,len(num)):
+#         key=num[i]
+#         j=i-1
+#         while(j>-1 and num[j]>key):
+#             num[j+1]=num[j]
+#             j=j-1
+#         num[j+1]=key
+#         for k in num:
+#             print(k,end=" ")
+#         print()
+# num=[15,12,11,16,19,14]
+# insertion(num)
+
+# Quick sort
+
+# def quick(num,low,high):
+#     if(low<high):
+#         pi=partition(num,low,high)
+#         quick(num,low,pi-1)
+#         quick(num,pi+1,high)
+#
+# def partition(num,low,high):
+#     pivot=num[high]
+#     i=low-1
+#     j=low
+#     while j!=high:
+#
+#         if(num[j]<pivot):
+#             i+=1
+#             temp=num[j]
+#             num[j]=num[i]
+#             num[i]=temp
+#         j+=1
+#     temp=num[i+1]
+#     num[i+1]=num[high]
+#     num[high]=temp
+#
+#     for k in num:
+#         print(k,end=" ")
+#     print()
+#     return i+1
+#
+# num=[15,12,11,16,19,14]
+# low=0
+# high=len(num)-1
+# quick(num,low,high)
+
+# insertion Sort
+# def insertion(num):
+#     for i in range(1,len(num)):
+#         key=num[i]
+#         j=i-1
+#         while(j>-1 and num[j]>key):
+#             num[j+1]=num[j]
+#             j=j-1
+#         num[j+1]=key
+#         for k in num:
+#             print(k,end=" ")
+#         print()
+#
+# num=[15,12,11,16,19,14,1]
+# insertion(num)
+
+# selection sort
+# def selection(num):
+#     for i in range(len(num)-1):
+#         min=i
+#         for j in range(i+1,len(num)):
+#             if(num[j]<num[min]):
+#                 min=j
+#         temp=num[min]
+#         num[min]=num[i]
+#         num[i]=temp
+#         for k in num:
+#             print(k,end=" ")
+#         print()
+#
+# num=[15,12,11,16,19,14,1]
+# selection(num)
+
+# printing pattern
+#     *
+#    * *
+#   * * *
+#  * * * *
+# * * * * *
+#
+# for i in range(5,0,-1):
+#     print(" "*i,end=" ")
+#     j=1
+#     for j in range(5-i+1):
+#         print("*",end=" ")
+#     print()
+
+# * * * * *
+#  * * * *
+#   * * *
+#    * *
+#     *
+# for i in range(0,5):
+#     print(" "*i,end=" ")
+#     j=1
+#     for j in range(5-i):
+#         print("*",end=" ")
+#     print()
+
+#  *****
+#   ****
+#    ***
+#     **
+#      *
+# for i in range(5):
+#     print(" "*i,end=" ")
+#     j=0
+#     for j in range(5-i):
+#         print("*",end="")
+#     print()
+
+#         *
+#        **
+#       ***
+#      ****
+#     *****
+# for i in range(5,0,-1):
+#     print(" "*i,end=" ")
+#     j=0
+#     for j in range(5-i+1):
+#         print("*",end="")
+#     print()
+
+# *
+# * *
+# * * *
+# * * * *
+# * * * * *
+# for i in range(5):
+#     j=0
+#     for j in range(i+1):
+#         print("*",end=" ")
+#
+#     print()
+
+# *****
+# ****
+# ***
+# **
+# *
+
+# for i in range(5,0,-1):
+#     print("*"*i,end=" ")
+#     j=0
+#     for j in range(5-i+1):
+#         print(" "*j,end=" ")
+#     print()
+
+# Thread or Multithreading
+from threading import Thread
+from threading import Lock
+from time import sleep
+from Tools.scripts.texi2html import increment
+from select import select
+
+
+# class A (Thread):
+#     count = 0
+#     def increment(self):
+#         self.count+=1
+#
+#     def run(self):
+#         for i in range(1000):
+#             sleep(0)
+#             self.increment()
+#             print("hi")
+# class B (Thread):
+#     count=0
+#     def increment(self):
+#         self.count+=1
+#     def run(self):
+#         for i in range(1000):
+#             sleep(0)
+#             self.increment()
+#             print("hello")
+#
+# a=A()
+# b=B()
+#
+# a.start()
+# b.start()
+# a.join()
+# b.join()
+# print("total count is ",a.count+b.count)
+
+
+# class C:
+#     def __init__(self):
+#         self.count=0
+#
+#     def  increment(self):
+#          # we use synchronized instead of lock .
+#          self.count += 1
+# class A (Thread):
+#     def run(self):
+#         for i in range(1000):
+#             sleep(0)
+#             c.increment()
+#             print("hi")
+# class B (Thread):
+#     def run(self):
+#         for i in range(1000):
+#             sleep(0)
+#             c.increment()
+#             print("hello")
+#
+# a=A()
+# b=B()
+# c=C()
+# a.start()
+# b.start()
+# a.join()
+# b.join()
+# print("total count is ",c.count)
+
+
+# class C:
+#     count=0
+#     @staticmethod
+#     def  increment():
+#          # we use synchronized instead of lock .
+#          C.count += 1
+# class A (Thread):
+#     def run(self):
+#         for i in range(1000):
+#             sleep(0)
+#             C.increment()
+#             print("hi")
+# class B (Thread):
+#     def run(self):
+#         for i in range(1000):
+#             sleep(0)
+#             C.increment()
+#             print("hello")
+# a=A()
+# b=B()
+# c=C()
+# a.start()
+# b.start()
+# a.join()
+# b.join()
+# print("total count is ",c.count)
 
